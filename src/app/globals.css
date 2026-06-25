@@ -102,3 +102,30 @@ canvas {
   }
 }
 
+/* Custom Cursor Hide */
+@media (pointer: fine) {
+  *, body, a, button, input, select, textarea, [role="button"] {
+    cursor: none !important;
+  }
+}
+
+/* Background Orb Animations */
+@keyframes orb-slow {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(60px, 45px) scale(1.12); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes orb-reverse {
+  0% { transform: translate(0, 0) scale(1.08); }
+  50% { transform: translate(-45px, -60px) scale(0.92); }
+  100% { transform: translate(0, 0) scale(1.08); }
+}
+
+.animate-orb-slow {
+  animation: orb-slow 24s infinite ease-in-out;
+}
+.animate-orb-reverse {
+  animation: orb-reverse 28s infinite ease-in-out;
+}
+
+

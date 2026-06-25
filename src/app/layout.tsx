@@ -15,6 +15,9 @@ export const metadata: Metadata = {
     "Developer portfolio for Harshit, an AI/ML engineer and full-stack developer (B.Tech VESIT Mumbai). Building multi-agent architectures, voice pipelines, and production full-stack platforms.",
 };
 
+import { SmoothScroll } from "@/components/SmoothScroll";
+import { CustomCursor } from "@/components/CustomCursor";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -24,7 +27,10 @@ export default function RootLayout({
     <html lang="en" className={`${spaceGrotesk.variable} dark`}>
       <body className="antialiased font-sans">
         <div className="grain-overlay pointer-events-none" />
-        {children}
+        <SmoothScroll>
+          <CustomCursor />
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );
