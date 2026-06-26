@@ -135,7 +135,7 @@ export function Projects() {
     <section id="projects" className="relative bg-[#0C0C0C] px-6 py-32 overflow-hidden w-full min-h-screen flex flex-col justify-center items-center">
       <div className="max-w-7xl w-full mb-16 text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#BBCCD7] font-mono mb-3">
-          Selected work
+          My Projects
         </p>
         <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white">
           Systems, apps, and product code.

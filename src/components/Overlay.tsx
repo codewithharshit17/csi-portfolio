@@ -118,7 +118,7 @@ function SceneOne({ progress }: OverlayProps) {
               className="group relative flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.02] px-6 py-3 font-mono text-[10px] uppercase tracking-widest text-[#D7E2EA] backdrop-blur-md transition-all duration-300 hover:bg-white/[0.08] hover:border-white/20 hover:shadow-[0_0_20px_rgba(255,255,255,0.05)] overflow-hidden cursor-pointer"
             >
               <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none" />
-              <span>Selected Work</span>
+              <span>Go to Projects</span>
               <ArrowDown className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-y-0.5" />
             </button>
           </Magnet>
