@@ -1,36 +1,23 @@
-"use client";
-
-import { motion } from "framer-motion";
-import React from "react";
+import React, { ReactNode } from 'react';
 
 interface FadeInProps {
-  children: React.ReactNode;
-  delay?: number;
-  duration?: number;
+  children: ReactNode;
   yOffset?: number;
+  duration?: number;
+  delay?: number;
   className?: string;
 }
 
 export function FadeIn({
   children,
-  delay = 0,
-  duration = 0.8,
-  yOffset = 30,
-  className = "",
+  yOffset,
+  duration,
+  delay,
+  className = '',
 }: FadeInProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: yOffset }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{
-        duration,
-        delay,
-        ease: [0.16, 1, 0.3, 1], // easeOutExpo
-      }}
-      className={className}
-    >
+    <div className={className}>
       {children}
-    </motion.div>
+    </div>
   );
 }
