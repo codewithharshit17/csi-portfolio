@@ -33,15 +33,27 @@ const projects: Project[] = [
 
 export function Projects() {
   const containerRef = useRef<HTMLDivElement>(null);
+  
+  // Create a tracking reference array to collect our card elements safely
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
   const [activeProject, setActiveProject] = useState<number | null>(null);
 
-  const handleMouseEnter = (index: number) => {
+  // TODO: Day 1 Hands-On - Write vector math calculations and compile GSAP timelines inside here
+  const handleMouseEnterDeck = () => {
     // Stub for workshop: Add GSAP animation logic here later
+  };
+
+  const handleMouseLeaveDeck = () => {
+    // Stub for workshop: Add GSAP animation reverse logic here later
+  };
+
+  const handleMouseEnterCard = (index: number) => {
+    // Stub for workshop: Add single card spotlight pop logic here later
     setActiveProject(index);
   };
 
-  const handleMouseLeave = () => {
-    // Stub for workshop: Add GSAP animation reverse logic here later
+  const handleMouseLeaveCard = () => {
+    // Stub for workshop: Add single card spotlight exit logic here later
     setActiveProject(null);
   };
 
@@ -49,19 +61,26 @@ export function Projects() {
     <section className="py-20 px-8 max-w-7xl mx-auto" ref={containerRef}>
       <h2 className="text-4xl font-bold mb-12 text-white">Featured Projects</h2>
       
-      <div className="relative h-[600px] w-full flex items-center justify-center">
+      {/* Master container deck wrapper */}
+      <div 
+        className="relative h-[600px] w-full flex items-center justify-center"
+        onMouseEnter={handleMouseEnterDeck}
+        onMouseLeave={handleMouseLeaveDeck}
+      >
         {projects.map((project, index) => (
           <div
             key={index}
-            className="absolute inset-0 m-auto w-full max-w-2xl h-[400px] rounded-2xl bg-zinc-900 border border-zinc-800 p-8 flex flex-col justify-between transition-colors hover:border-zinc-700"
-            onMouseEnter={() => handleMouseEnter(index)}
-            onMouseLeave={handleMouseLeave}
+            // Bind individual card elements into our reference array slots
+            ref={(el) => { cardsRef.current[index] = el; }}
+            className="absolute m-auto w-full max-w-2xl h-[400px] rounded-2xl bg-zinc-900 border border-zinc-800 p-8 flex flex-col justify-between transition-colors hover:border-zinc-700"
+            onMouseEnter={() => handleMouseEnterCard(index)}
+            onMouseLeave={handleMouseLeaveCard}
             style={{ zIndex: projects.length - index }}
           >
             <div>
               <div className="flex justify-between items-start mb-4">
                 <h3 className="text-3xl font-bold text-white">{project.title}</h3>
-                <a href={project.link} className="text-zinc-400 hover:text-white transition-colors">
+                <a href={project.link} className="text-zinc-400 hover:text-white transition-colors relative z-10">
                   <ArrowUpRight size={28} />
                 </a>
               </div>
