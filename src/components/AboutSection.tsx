@@ -9,7 +9,7 @@ import { Terminal, Cpu, Network, Binary } from "lucide-react";
 export function AboutSection() {
   return (
     <section id="about" className="relative min-h-screen w-full flex flex-col justify-center items-center bg-[#0C0C0C] px-6 py-28 md:py-40 overflow-hidden">
-      
+
       {/* Corner Decorative Tech Graphics */}
       {/* Top-Left: Terminal Screen Corner */}
       <div className="absolute top-12 left-12 opacity-25 hidden sm:block">
@@ -57,7 +57,7 @@ export function AboutSection() {
 
       {/* Main Content Area */}
       <div className="max-w-4xl w-full flex flex-col items-center text-center gap-12 sm:gap-16 z-10">
-        
+
         {/* About Me Section Title */}
         <FadeIn delay={0.2} yOffset={30}>
           <h2 className="hero-heading font-black uppercase tracking-tight text-[8vw] sm:text-[6vw] md:text-[5vw] lg:text-[6vw] leading-none">
@@ -67,7 +67,7 @@ export function AboutSection() {
 
         {/* Bio Text Paragraph with Scroll-Triggered Character Reveal */}
         <AnimatedText
-          text="I'm an AI/ML engineer and full-stack developer studying at VESIT Mumbai, currently building multi-agent systems, voice pipelines, and a production e-commerce platform. I run technical workshops at CSI VESIT and contribute to open source. I like working close to the metal of a problem — from model architecture down to the UI someone actually touches."
+          text="lorem epsum jhgjhblknqkdwdvyudikbjkchbjknvlkbhjuiboir lklkbnlkbsdkbvlkewbukewlkbnvlknlknlnkasbjfvkwbvbbjkvblknv"
           className="font-display font-light text-xl sm:text-2xl md:text-3xl lg:text-[2.2rem] text-[#D7E2EA] leading-[1.4] sm:leading-[1.5] text-center"
         />
 

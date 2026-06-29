@@ -29,4 +29,6 @@ yarn-error.log*
 next-env.d.ts
 
 # user requested ignores
+/public
+
 
