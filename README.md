@@ -1,13 +1,3 @@
-```markdown
-# Creative 3D Portfolio Website — Workshop Starter Kit
-
-This repository serves as the official, compilation-safe baseline repository for our intensive 2-day engineering workshop. It contains the structural layout primitives, typed interfaces, and core markup data blocks, leaving explicit visual spaces to implement high-performance web animations, interactive mathematics, and glassmorphic UI design rules.
-
-## 🚀 Live Baseline Status
-Your starter environment is configured to run flawlessly on Next.js 15 App Router out of the box with zero compilation blockades. Run the local development server to view the un-animated base platform:
-```bash
-npm run dev
-
 ```
 ## 🛠️ Project Stack Setup
 The core architectural libraries are pre-configured inside our dependency tree:
@@ -51,7 +41,6 @@ csi-portfolio/
         ├── CustomCursor.tsx # Liquid trail pointer coordinates listener
         ├── FadeIn.tsx       # Un-animated component envelope (Day 1 Module)
         ├── Footer.tsx       # Dark baseline panel markup placeholder (Day 1 & 2 Module)
-        ├── LiveProjectButton.tsx # Project navigation link bindings
         ├── Magnet.tsx       # Element proximity cursor attraction parameters
         ├── Overlay.tsx      # Multi-scene canvas type overrides
         ├── Projects.tsx     # Plain stacked absolute card deck shell (Day 1 Module)
